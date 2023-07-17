@@ -1,10 +1,10 @@
-#include <"Renderer.h>
+#include "Renderer.h"
+ 
+#include <iostream>
 
-#include <iostream> 
-
-void GlClearError();
+void GlClearError()
 {
-    while (glGetError() != GL_NO_ERROR)
+    while (glGetError() != GL_NO_ERROR);
 }
 
 bool GlLogCall(const char* function, const char* file, int line)

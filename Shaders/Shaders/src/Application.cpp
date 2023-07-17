@@ -6,10 +6,10 @@
 #include <string>
 #include <sstream>
 
-#include <Renderer.h>
+#include "Renderer.h"
 
-#include <"VertexBuffer.h>
-#include <"IndexBuffer.h>
+#include "VertexBuffer.h"
+#include "IndexBuffer.h"
 
 struct ShaderProgramSource
 {
@@ -139,7 +139,7 @@ int main(void)
     GlCall(glEnableVertexAttribArray(0));
     GlCall(glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, 0));
 
-    IndexBuffer ib(indeces, 6);
+    IndexBuffer ib(indices, 6);
 
     ShaderProgramSource source = ParseShader("res/shaders/Basic.shader");
 
